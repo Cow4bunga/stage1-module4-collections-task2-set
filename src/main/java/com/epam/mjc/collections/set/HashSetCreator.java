@@ -7,21 +7,21 @@ import java.util.Set;
 
 public class HashSetCreator {
     public HashSet<Integer> createHashSet(List<Integer> sourceList) {
-        HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> hSet = new HashSet<>();
         for (Integer item : sourceList) {
             if (item % 2 == 0) {
                 int elem = item;
-                set.add(elem);
+                hSet.add(elem);
                 while (elem % 2 != 1 && elem != 0) {
-                    set.add(elem);
+                    hSet.add(elem);
                     elem /= 2;
                 }
             } else {
-                set.add(item);
-                set.add(item * 2);
+                hSet.add(item);
+                hSet.add(item * 2);
             }
 
         }
-        return set;
+        return hSet;
     }
 }
